@@ -1,0 +1,23 @@
+{
+  "overview": "A comprehensive educational website covering everything about whey protein in the fitness industry — what it is, types, safety, daily dosage, pricing, and a protein calculator to help users personalize their intake.",
+  "features": [
+    "Hero section with clear overview and navigation",
+    "Whey protein types comparison (concentrate, isolate, hydrolysate)",
+    "Health benefits with evidence-based claims",
+    "Safety & side effects section with medical disclaimers",
+    "Daily dosage guide with personalized protein calculator",
+    "Pricing comparison by type with cost-per-serving breakdown",
+    "Searchable FAQ accordion with 10+ questions",
+    "Fully responsive layout for mobile, tablet, and desktop"
+  ],
+  "category": "education",
+  "tags": [
+    "whey-protein",
+    "fitness",
+    "nutrition",
+    "health",
+    "supplements",
+    "education"
+  ],
+  "last_updated": "2026-05-04T15:12:31.900Z"
+}

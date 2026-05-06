@@ -1,0 +1,72 @@
+type WheyType = 
+ record {
+   bestFor: vec text;
+   costRangePerLb: text;
+   description: text;
+   fatContent: text;
+   id: text;
+   lactoseContent: text;
+   name: text;
+   proteinPercent: nat;
+ };
+type SeverityLevel = 
+ variant {
+   mild;
+   moderate;
+   severe;
+ };
+type SafetyItem = 
+ record {
+   category: text;
+   detail: text;
+   id: nat;
+   severity: SeverityLevel;
+   title: text;
+ };
+type ProteinCalculationResult = 
+ record {
+   bodyWeightKg: float64;
+   dailyProteinTargetG: float64;
+   dosePerServingG: float64;
+   fitnessGoal: text;
+   servingsPerDay: nat;
+ };
+type PricingEntry = 
+ record {
+   id: nat;
+   monthlyEstimate: text;
+   notes: text;
+   pricePerServing: text;
+   priceRangePerLb: text;
+   productType: text;
+ };
+type FaqEntry = 
+ record {
+   answer: text;
+   category: text;
+   id: nat;
+   question: text;
+ };
+type EvidenceLevel = 
+ variant {
+   moderate;
+   preliminary;
+   strong;
+ };
+type BenefitItem = 
+ record {
+   description: text;
+   evidenceLevel: EvidenceLevel;
+   id: nat;
+   sourceCitation: text;
+   title: text;
+ };
+service : {
+  calculateProtein: (bodyWeightKg: float64, fitnessGoal: text) ->
+   (ProteinCalculationResult) query;
+  getBenefits: () -> (vec BenefitItem) query;
+  getFaqs: () -> (vec FaqEntry) query;
+  getPricingData: () -> (vec PricingEntry) query;
+  getSafetyInfo: () -> (vec SafetyItem) query;
+  getWheyTypes: () -> (vec WheyType) query;
+}
